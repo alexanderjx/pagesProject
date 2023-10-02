@@ -13,6 +13,7 @@ RUN pip install pipenv
 COPY Pipfile Pipfile.lock /code/
 RUN pipenv install --deploy --system
 COPY . /code
+RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
